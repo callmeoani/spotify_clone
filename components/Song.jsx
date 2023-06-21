@@ -71,7 +71,7 @@ const Song = ({
           <p className="w-36 truncate">
             {track?.artists.map((artist, i) => {
               return (
-                <>
+                <div key={i}>
                   <span
                     onClick={() => selectArtist(artist)}
                     className="hover:underline"
@@ -79,7 +79,7 @@ const Song = ({
                     {artist?.name}
                   </span>
                   <span>{i != track.artists.length - 1 ? ", " : null}</span>
-                </>
+                </div>
               );
             })}
           </p>
